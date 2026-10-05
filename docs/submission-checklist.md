@@ -15,8 +15,8 @@ Status: review draft, not final submission approval. Due 11 October 2026; exact 
 ## Finish before claiming submission-ready
 
 - [x] Export and visually check exactly 5–7 readable slides at docs/presentation.pdf; preserve mathematical signs, facts and limitations. Seven pages checked; see phase7-verification.md.
-- [ ] Publish reviewed source and PDF to the authorized existing repository, without caches, model weights, runtime files or personal/assessment credentials.
-- [ ] Clone the published commit into a separate directory and verify Quickstart/build/test/replay; record whether environments/model cache were fresh or reused.
+- [x] Publish reviewed source and PDF to the authorized existing repository, without caches, model weights, runtime files or personal/assessment credentials. Initial commit 4cb975a; author uses college email.
+- [x] Clone the published commit into a separate directory and verify Quickstart/build/test/replay; fresh Python/node environments, reused checksum-verified weights. All 11 steps passed; see published-clone-results.json.
 - [ ] Candidate completes walkthrough and records label review in evaluation-review.md. Do not approve AI draft labels merely because outputs agree.
 - [ ] Resolve model-weight and optional diagnostic-data use/attribution notices in THIRD_PARTY_NOTICES.md. MIT code licensing does not imply rights to everything downloaded.
 - [ ] Organizer confirms whether EventLens repository naming is accepted, or candidate authorizes the guideline-compliant rename. Current required pattern: <college>-<candidate-name>-hackathon.

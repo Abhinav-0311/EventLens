@@ -11,7 +11,7 @@
 - Primary actor: a wholesale-banking portfolio risk analyst.
 - Outcome: trace an incoming text event through structured risk intelligence to an explained portfolio stress result.
 - Selected scope: required AI/NLP Risk Engine plus Module B, Strategic Portfolio Stress Testing.
-- Status: Phases 1–4 complete on 5 October 2026 IST; Phase 5 engineering evaluation/refinement and isolated clean-install checks complete. Backend, stress calculations and dashboard are verified. Candidate-reviewed labels, published-repository clone verification, walkthrough and presentation/submission gates remain. This is not submission-ready or independently validated for autonomous risk decisions.
+- Status: Phases 1–4 complete on 5 October 2026 IST; Phase 5 engineering evaluation/refinement and isolated clean-install checks complete. Backend, stress calculations and dashboard are verified. Phase 7 presentation/recording preparation, authorized publication and actual anonymous published-clone checks are complete. Candidate-reviewed labels, walkthrough, model/data notices, naming/cutoff and recording/submission gates remain. This is not submission-ready or independently validated for autonomous risk decisions.
 
 ## Product intent and module decision
 
@@ -365,7 +365,7 @@ Real trading, return guarantees, regulatory capital certification, forecasting a
 
 The candidate's immediate tasks are learning/review checkpoints and recording/submission participation. No paid API procurement or dataset sourcing is required for the initial scope. Do not estimate delivery solely from the assistant's coding speed: model execution, source verification, candidate understanding, and final access checks remain real gates.
 
-Next is Phase 6: candidate walkthrough, hand calculation, review of draft labels and jury questions. Review the archive limitations before deciding whether to expand the parser; any archive-driven refinement requires a new version and new untouched test sources. Hosting target, broader independent source/evaluation coverage, model/data-use notices, publishing/actual-clone checks, exact cutoff and repository naming remain decisions. No independent model-accuracy or final submission-readiness claim has been established.
+Next is the candidate checkpoint: walkthrough, hand calculation, review of draft labels and jury questions, followed by recording. Presentation/recording guides and published-clone engineering checks are prepared; human review is not automatically complete. Review the archive limitations before deciding whether to expand the parser; any archive-driven refinement requires a new version and new untouched test sources. Hosting target, broader independent source/evaluation coverage, model/data-use notices, exact cutoff and repository naming remain decisions. No independent model-accuracy or final submission-readiness claim has been established.
 
 ## Sources
 

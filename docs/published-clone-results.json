@@ -1,0 +1,88 @@
+{
+  "kind": "anonymous-published-GitHub-clone",
+  "status": "passed",
+  "fresh_python_environment": true,
+  "fresh_node_modules": true,
+  "weights": "reused checksum-verified local cache, not a fresh download",
+  "steps": [
+    {
+      "name": "clone",
+      "status": "passed",
+      "seconds": 5.84,
+      "exit_code": 0
+    },
+    {
+      "name": "create-venv",
+      "status": "passed",
+      "seconds": 16.17,
+      "exit_code": 0
+    },
+    {
+      "name": "npm-ci",
+      "status": "passed",
+      "seconds": 7.59,
+      "exit_code": 0
+    },
+    {
+      "name": "frontend-build",
+      "status": "passed",
+      "seconds": 3.67,
+      "exit_code": 0
+    },
+    {
+      "name": "frontend-tests",
+      "status": "passed",
+      "seconds": 44.36,
+      "exit_code": 0
+    },
+    {
+      "name": "install-python",
+      "status": "passed",
+      "seconds": 309.69,
+      "exit_code": 0
+    },
+    {
+      "name": "pip-check",
+      "status": "passed",
+      "seconds": 4.08,
+      "exit_code": 0
+    },
+    {
+      "name": "backend-tests",
+      "status": "passed",
+      "seconds": 34.52,
+      "exit_code": 0
+    },
+    {
+      "name": "real-model-replay-export-restart",
+      "status": "passed",
+      "seconds": 19.64,
+      "exit_code": 0
+    },
+    {
+      "name": "loopback-http-dashboard",
+      "status": "passed",
+      "seconds": 15.42,
+      "exit_code": 0
+    },
+    {
+      "name": "clone-clean-status",
+      "status": "passed",
+      "seconds": 0.19,
+      "exit_code": 0
+    }
+  ],
+  "commit": "4cb975a8167fea6462671fd258cdaa18abf4bcf6",
+  "key_artifact_hashes": "PDF/PNG exact match; text match after Git CRLF/LF normalization",
+  "model_sha256": "e15a7b5738df7f17553399b6d94c6e2ff69c89245d066e8e5d183f5803a554e3",
+  "measured_on": "2026-10-05",
+  "test_counts": {
+    "backend": 183,
+    "frontend": 30
+  },
+  "scope_notes": [
+    "No new live-provider check or browser suite was performed by this clone gate.",
+    "Fresh environments reused installer caches and checksum-verified model weights; fresh model acquisition was separately verified in Phase 5.",
+    "Later documentation-only follow-up commits record this result; the tested application commit is listed explicitly."
+  ]
+}

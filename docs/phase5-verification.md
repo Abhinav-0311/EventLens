@@ -68,7 +68,7 @@ The export has its own venv (`include-system-site-packages = false`), npm instal
 
 An earlier export (`runtime/phase5-clean-8c13714ebab24878b188ec28866e7c2d/report.json`) failed because the verifier omitted pytest's temporary-directory parent. The script was fixed and the complete process repeated in a new export. The failed report/logs are preserved.
 
-This is a **local source export, not an actual GitHub clone**. The remote still has no refs and no files have been staged/committed/pushed. Publishing approval and a clone of the published commit remain submission gates. No live-provider calls were made by this offline clean gate.
+This was a **local source export, not an actual GitHub clone**. At completion of this gate, the remote had no refs and files had not been staged/committed/pushed. Later authorized publication and actual published-clone results are tracked separately in [Phase 7](phase7-verification.md). No live-provider calls were made by this offline clean gate.
 
 ## Reproduction and artifacts
 
