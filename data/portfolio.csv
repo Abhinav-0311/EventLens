@@ -1,0 +1,21 @@
+id,asset_type,instrument_type,issuer,sector,region,currency,base_market_value_usd,notional_usd,rate_duration,spread_duration,signed_rate_pnl_per_bp,portfolio_version
+L01,loan,fixed,Aster Energy,energy,US,USD,6000000.00,6200000.00,3.8,3.5,0,usd-demo-v1
+L02,loan,floating,Aster Energy,energy,US,USD,6000000.00,6200000.00,0.25,3.2,0,usd-demo-v1
+L03,loan,fixed,Meridian Transport,transport,US,USD,6000000.00,6200000.00,4.2,4.0,0,usd-demo-v1
+L04,loan,floating,Meridian Transport,transport,US,USD,6000000.00,6200000.00,0.2,3.5,0,usd-demo-v1
+L05,loan,fixed,Forge Manufacturing,manufacturing,US,USD,6000000.00,6200000.00,3.0,2.8,0,usd-demo-v1
+L06,loan,floating,Forge Manufacturing,manufacturing,US,USD,6000000.00,6200000.00,0.3,2.5,0,usd-demo-v1
+L07,loan,fixed,Cedar Technology,technology,US,USD,6000000.00,6200000.00,2.5,2.3,0,usd-demo-v1
+L08,loan,floating,Cedar Technology,technology,US,USD,6000000.00,6200000.00,0.25,2.0,0,usd-demo-v1
+L09,loan,fixed,Harbor Financial,financials,US,USD,6000000.00,6200000.00,3.2,3.0,0,usd-demo-v1
+L10,loan,floating,Harbor Financial,financials,US,USD,6000000.00,6200000.00,0.2,2.8,0,usd-demo-v1
+B01,bond,government,Fictional USD Sovereign,sovereign,US,USD,8000000.00,8000000.00,5.8,0,0,usd-demo-v1
+B02,bond,government,Fictional USD Sovereign,sovereign,US,USD,8000000.00,8000000.00,2.5,0,0,usd-demo-v1
+B03,bond,corporate,Aster Energy,energy,US,USD,6000000.00,6100000.00,4.5,4.2,0,usd-demo-v1
+B04,bond,corporate,Meridian Transport,transport,US,USD,6000000.00,6100000.00,3.5,3.2,0,usd-demo-v1
+B05,bond,corporate,Forge Manufacturing,manufacturing,US,USD,6000000.00,6100000.00,4.0,3.8,0,usd-demo-v1
+B06,bond,corporate,Harbor Financial,financials,US,USD,6000000.00,6100000.00,3.0,2.7,0,usd-demo-v1
+S01,swap,payer_fixed,Harbor Financial,financials,US,USD,250000.00,30000000.00,0,0,1500,usd-demo-v1
+S02,swap,receiver_fixed,Harbor Financial,financials,US,USD,-150000.00,28000000.00,0,0,-1400,usd-demo-v1
+S03,swap,payer_fixed,Harbor Financial,financials,US,USD,100000.00,18000000.00,0,0,900,usd-demo-v1
+S04,swap,receiver_fixed,Harbor Financial,financials,US,USD,-200000.00,16000000.00,0,0,-800,usd-demo-v1

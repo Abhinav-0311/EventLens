@@ -1,0 +1,57 @@
+{
+  "schema_version": "phase5-summary-v1",
+  "measured_date": "2026-10-05",
+  "engine_version": "rules2-finbert1",
+  "classification_method": "phrase_rules_v2",
+  "impact_rubric": "severity_v1",
+  "model_revision": "4556d13015211d73dccd3fdd39d39232506f3e43",
+  "candidate_label_review": "pending",
+  "independent_broad_news_accuracy": null,
+  "phrasebank": {
+    "n": 90,
+    "selection": "30 per class by smallest sentence SHA256; all annotators agree",
+    "upstream_revision": "8d3fe0c36d5feec6b3cc5e455b0fcb4820fb9964",
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "majority_baseline_accuracy": 0.3333333333333333,
+    "labels": ["negative", "neutral", "positive"],
+    "confusion_matrix": [[30, 0, 0], [0, 30, 0], [0, 0, 30]],
+    "limitation": "Potential model-training overlap: local diagnostic, not held-out accuracy"
+  },
+  "development": {
+    "n": 30,
+    "baseline": {"class_correct": 28, "macro_f1": 0.9427432216905901, "subtype_correct": 28, "assertion_correct": 28, "impact_exact_correct": 28, "impact_mae": 0.3333333333333333, "unsafe_assertions": 1},
+    "refined": {"class_correct": 30, "macro_f1": 1.0, "subtype_correct": 30, "assertion_correct": 29, "impact_exact_correct": 30, "impact_mae": 0.0, "unsafe_assertions": 0},
+    "retained_error_ids": ["D09"],
+    "limitation": "AI-authored development cases and draft labels; tuning lane, not held-out accuracy"
+  },
+  "archive": {
+    "requested": 12,
+    "fetched": 12,
+    "class_correct": 11,
+    "subtype_correct": 11,
+    "assertion_correct": 9,
+    "impact_exact_correct": 4,
+    "impact_mae": 1.8333333333333333,
+    "majority_baseline_accuracy": 1.0,
+    "six_declared_class_macro_f1": 0.15942028985507248,
+    "macro_class_f1": 0.9565217391304348,
+    "zero_support_classes": 5,
+    "limitation": "Single publisher, policy-only, correlated archive templates and draft main-decision labels; no tuning from this result"
+  },
+  "serial_cpu_timing": {
+    "model_load_seconds": 10.558665199991083,
+    "phrasebank": {"median_ms": 83.41374999145046, "p95_ms": 120.60399999609217},
+    "development": {"median_ms": 55.9516000066651, "p95_ms": 68.87440002174117},
+    "archive": {"median_ms": 778.6769999947865, "p95_ms": 828.9220999868121},
+    "limitation": "One local CPU run, warm-up excluded, other checks active; not throughput or SLA"
+  },
+  "frozen_artifact_sha256": {
+    "development_manifest": "2417956dbf67d01c2c7a1bddc06030b6fe979d007b39b39e8e74b50809d943ce",
+    "archive_manifest": "2bcea7e4766287712226585cba4725b136bded3620be858c24e3d01df801a6d9",
+    "phrasebank_cache": "bf17bfafa4db2dffe663f8df7bed3e9eb2e5ec43bac18ab0a8cd6af3d951b543",
+    "archive_cache": "ed5ca0f9396432b1cc5e924bcc078a5df37ba90b5ea902c561458dba5a177906"
+  },
+  "raw_corpus_text_redistributed": false,
+  "report": "phase5-verification.md"
+}

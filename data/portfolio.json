@@ -1,0 +1,16 @@
+{
+  "version": "usd-demo-v1",
+  "name": "Fictional USD wholesale banking portfolio",
+  "provenance": "synthetic",
+  "currency": "USD",
+  "assumptions": [
+    "All issuers, positions, valuations and sensitivities are fictional. This is not a customer portfolio.",
+    "Fair value is separate from principal/notional. Signed derivative fair values are included in the base total; notionals are not.",
+    "Cash rate and credit-spread changes use separate first-order modified-duration sensitivities, in years.",
+    "Floating loans have short rate reset sensitivity but retain credit-spread sensitivity.",
+    "Swaps use synthetic signed USD P&L per basis point: payer-fixed positive, receiver-fixed negative under a positive parallel rate shock.",
+    "Government bonds have no corporate credit-spread shock; swaps have no modeled credit/CVA shock.",
+    "Excluded: convexity, nonparallel curves, basis risk, FX, options, liquidity, default cash flows, recovery, funding costs and net interest income.",
+    "No additional default-loss overlay is added to spread losses. These are conditional illustrative fair-value changes, not forecasts or regulatory capital calculations."
+  ]
+}

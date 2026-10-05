@@ -1,0 +1,5 @@
+# Reuse the exact CPU/backend dependency set verified in Phase 1.
+-r requirements-feasibility.txt
+beautifulsoup4==4.15.0
+defusedxml==0.7.1
+soupsieve==2.10

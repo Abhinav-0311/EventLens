@@ -1,0 +1,19 @@
+{
+  "version":"archive-policy-v1",
+  "label_status":"AI-drafted main-decision labels; candidate review pending",
+  "purpose":"Narrow archived policy-text slice, not fresh live evidence or broad event coverage",
+  "sources":[
+    {"id":"A01","date":"2022-06-15","url":"https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm","event_class":"Macroeconomic","event_subtype":"rate_hike","assertion_status":"asserted","impact_score":9},
+    {"id":"A02","date":"2022-07-27","url":"https://www.federalreserve.gov/newsevents/pressreleases/monetary20220727a.htm","event_class":"Macroeconomic","event_subtype":"rate_hike","assertion_status":"asserted","impact_score":9},
+    {"id":"A03","date":"2022-09-21","url":"https://www.federalreserve.gov/newsevents/pressreleases/monetary20220921a.htm","event_class":"Macroeconomic","event_subtype":"rate_hike","assertion_status":"asserted","impact_score":9},
+    {"id":"A04","date":"2022-11-02","url":"https://www.federalreserve.gov/newsevents/pressreleases/monetary20221102a.htm","event_class":"Macroeconomic","event_subtype":"rate_hike","assertion_status":"asserted","impact_score":9},
+    {"id":"A05","date":"2022-12-14","url":"https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm","event_class":"Macroeconomic","event_subtype":"rate_hike","assertion_status":"asserted","impact_score":8},
+    {"id":"A06","date":"2023-02-01","url":"https://www.federalreserve.gov/newsevents/pressreleases/monetary20230201a.htm","event_class":"Macroeconomic","event_subtype":"rate_hike","assertion_status":"asserted","impact_score":7},
+    {"id":"A07","date":"2023-03-22","url":"https://www.federalreserve.gov/newsevents/pressreleases/monetary20230322a.htm","event_class":"Macroeconomic","event_subtype":"rate_hike","assertion_status":"asserted","impact_score":7},
+    {"id":"A08","date":"2023-07-26","url":"https://www.federalreserve.gov/newsevents/pressreleases/monetary20230726a.htm","event_class":"Macroeconomic","event_subtype":"rate_hike","assertion_status":"asserted","impact_score":7},
+    {"id":"A09","date":"2023-09-20","url":"https://www.federalreserve.gov/newsevents/pressreleases/monetary20230920a.htm","event_class":"Macroeconomic","event_subtype":"macro_announcement","assertion_status":"unclear","impact_score":1},
+    {"id":"A10","date":"2024-09-18","url":"https://www.federalreserve.gov/newsevents/pressreleases/monetary20240918a.htm","event_class":"Macroeconomic","event_subtype":"rate_cut","assertion_status":"asserted","impact_score":8},
+    {"id":"A11","date":"2024-11-07","url":"https://www.federalreserve.gov/newsevents/pressreleases/monetary20241107a.htm","event_class":"Macroeconomic","event_subtype":"rate_cut","assertion_status":"asserted","impact_score":7},
+    {"id":"A12","date":"2024-12-18","url":"https://www.federalreserve.gov/newsevents/pressreleases/monetary20241218a.htm","event_class":"Macroeconomic","event_subtype":"rate_cut","assertion_status":"asserted","impact_score":7}
+  ]
+}
