@@ -7,12 +7,11 @@ Code to Connect Phase III — S&P Global × Crisil × Naukri Campus.
 - Candidate: Abhinav Jain
 - College: Vellore Institute of Technology, Bhopal
 - College email: abhinav.23bcg10130@vitbhopal.ac.in
-- Demo video link: pending candidate recording and verified unlisted YouTube upload; not yet submission-ready.
 - Slide deck: [seven-slide PDF](docs/presentation.pdf).
 
 ## Current status
 
-Phases 1–4 are complete: the backend/dashboard cover two live source adapters, pinned FinBERT, inspectable event/impact rules, a 20-position synthetic portfolio, four versioned scenarios, eligibility/review, automatic live/simulated runs, manual comparisons, SQLite snapshots, replay and JSON/CSV exports. Phase 5 evaluation, regression-first refinement and isolated clean installation have passed their engineering checks; [measured results and limitations](docs/phase5-verification.md) are documented. The seven-slide [presentation PDF](docs/presentation.pdf), [recording guide](docs/recording-guide.md) and [submission checklist](docs/submission-checklist.md) are prepared for review. An anonymous [published-clone check](docs/published-clone-results.json) passed fresh dependency installation/build, 183 backend/30 frontend tests, real-model replay/export/restart and loopback HTTP checks, with disclosed reuse of verified model weights. Candidate label review, walkthrough, notices/naming resolution and recording/submission remain. This is not a validated autonomous risk system or a completed assessment submission.
+The main application is implemented: the backend/dashboard cover two live source adapters, pinned FinBERT, inspectable event/impact rules, a 20-position synthetic portfolio, four versioned scenarios, eligibility/review, automatic live/simulated runs, manual comparisons, SQLite snapshots, replay and JSON/CSV exports. Evaluation, regression-first refinement and isolated clean installation have passed their engineering checks; [measured results and limitations](docs/phase5-verification.md) are documented. The seven-slide [presentation PDF](docs/presentation.pdf) and [submission checklist](docs/submission-checklist.md) accompany the application. An anonymous [published-clone check](docs/published-clone-results.json) passed fresh dependency installation/build, 183 backend/30 frontend tests, real-model replay/export/restart and loopback HTTP checks, with disclosed reuse of verified model weights. Candidate label review, walkthrough, notices/naming resolution and recording/submission remain. This is not a validated autonomous risk system or a completed assessment submission.
 
 The RSS and social adapters currently share one publisher, the Federal Reserve Board. Two channels are not independent corroboration. See [risk-engine verification](docs/phase2-verification.md), [stress verification](docs/phase3-verification.md), [dashboard verification](docs/phase4-verification.md), and [math/assumptions](docs/stress-model.md). Provider availability varies; degraded states never substitute fictional evidence.
 
@@ -53,8 +52,6 @@ The one-time setup downloads roughly 418 MiB of model weights, plus Python depen
 
 Open the [dashboard](http://127.0.0.1:8000/) or [interactive API docs](http://127.0.0.1:8000/docs). The built React dashboard and API share one origin and one server. Only `frontend/dist` is served, not project data or runtime files. Build before starting the server; restart if the first frontend build was made after startup. Use one Uvicorn worker: job admission and inference serialization are deliberately single-process.
 
-For a prepared Windows recording session, run `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\start_demo.ps1` from the repository root. It builds the dashboard, verifies the existing local model, refuses an occupied port, starts on `127.0.0.1:8019` and uses a new database without touching existing runs. It does not install dependencies or download anything. Use `-Port 8021` if needed, `-CheckOnly` for preflight, or `-SkipBuild` only when deliberately reusing an already built dashboard. Ctrl+C stops the owned server. Follow the [candidate action plan](docs/candidate-action-plan.md), including unresolved third-party use notices, before recording/submitting.
-
 In the dashboard, load sample events for the reproducible fictional journey, select a rate event, inspect its evidence, and open the saved stress result. Portfolio shows base positions and assumptions; Runs retains independent calculations. Compare scenario requires a saved reason and is always labelled manual. Analyze supplied text is an optional collapsed panel; it cannot turn pasted text into verified live evidence. Refresh live sources never substitutes samples after a provider failure. All displayed dates are UTC.
 
 For frontend development, keep the backend above running and, in a second terminal, run `npm.cmd run dev` from `frontend`. Open `http://127.0.0.1:5173`; Vite proxies `/api` to port 8000. No API token belongs in a Vite environment variable. The optional Access panel holds a write token in page memory only, clearing it on reload. This is local demonstrator access, not a verified public-authentication solution.
@@ -70,17 +67,7 @@ In the docs:
 7. `GET /api/stress-runs` lists saved results. The replay produces three labelled automatic simulations; repeating it creates no additional runs.
 8. `POST /api/stress-runs` creates a manual comparison; `GET /api/stress-runs/{id}` and `GET /api/exports/stress-runs/{id}?format=csv` inspect/export it.
 
-Example manual request (replace `EVENT_ID` with a credit event ID from replay):
-
-```json
-{
-  "event_id": "EVENT_ID",
-  "scenario_id": "credit_deterioration",
-  "idempotency_key": "my-credit-comparison-1",
-  "impact_score": 8,
-  "override_reason": "Fictional issuer-specific comparison; original default signal scores 7."
-}
-```
+The dashboard's manual comparison uses the selected saved event, an explicit scenario and impact setting, a recorded reason and an idempotency key. The fictional issuer-default signal scores 7; comparing it at impact 8 does not alter the original signal.
 
 Money is returned as decimal strings. Portfolio fair value is $100 million; principal/notional is separately $194.4 million. Rate cuts can produce gains. Every scenario starts from the original base; manual requests cannot claim automatic or verified-source status. Automatic execution waits for a complete successful ingestion batch and applies only to matching eligible events.
 
@@ -179,5 +166,3 @@ Signals, raw evidence, operation states, source cooldowns and completed stress s
 The pretrained model, libraries, and sources remain third-party work. See [third-party notices](THIRD_PARTY_NOTICES.md). Project code is [MIT licensed](LICENSE). AI-assisted development is used; candidate walkthrough, label review, and final submission checks are still required.
 
 The [project plan](PROJECT_PLAN.md) tracks remaining phases, repository-naming guidance, model notices, and final packaging. Presentation claims distinguish software checks from language evaluation; AI-drafted labels and archive limitations remain visible. The [architecture image](docs/architecture.png) is also available as a static diagram. Recorded-video preparation does not imply a video has been recorded, uploaded or submitted.
-
-Remaining candidate steps are ordered in [candidate-action-plan.md](docs/candidate-action-plan.md). [Clarification email drafts](docs/clarification-emails.md) have not been sent; the [submission answer template](docs/submission-answer-template.md) must receive the real verified YouTube URL before use.

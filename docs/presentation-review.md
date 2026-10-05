@@ -12,7 +12,7 @@ Visual inspection uses a rendered seven-slide contact sheet plus full-size slide
 
 ## Humanizer light-mode review
 
-Draft rewrite: presentation-content.md records the evidence-grounded first copy. Final rewrite: presentation.pdf contains the final, condensed slide wording; recording-guide.md contains the spoken review script.
+Draft rewrite: presentation-content.md records the evidence-grounded first copy. Final rewrite: presentation.pdf contains the final, condensed slide wording. Spoken narration is provided in the chat.
 
 What read as generated: Gamma's repeated “Two channels share one publisher” statement added no information; its diagram was generic rather than project-specific. Canva added “confirm robustness” without a bounded claim. Native prose also introduced em-dash signposts. These did not survive in the canonical PDF.
 
@@ -28,7 +28,7 @@ Candidate walkthrough/labels, model/data-use notices, naming and cutoff clarific
 
 ## Handoff wording review
 
-Humanizer mode: light for submission-answer-template.md and clarification-emails.md; the procedural action plan remains structured handoff text. Draft rewrite and final rewrite are the scoped files added during handoff. Both mechanical light-mode checks passed.
+Supplementary answer/email prose passed Humanizer light-mode checks during preparation. Those documents were removed at the candidate's request; the following notes describe that historical review, not additional submission artifacts.
 
 What makes the draft read as generated? No filler cluster required a rewrite. The answer's engineering-count paragraph could sound like an accuracy assertion without its explicit qualification; the phrase "two channels" could imply independent sources without "same publisher". Those qualifications are retained. The email questions are concrete requests, not a claim that replies or approvals already exist.
 
@@ -36,4 +36,4 @@ Anything fabricated? No. Candidate identity, project scope, values, source/versi
 
 What I cut: no cosmetic rewrite was needed after the mechanical pass. The new copy uses plain verbs and direct questions, avoiding C2 filler, C5 em dashes and C8 signpost phrases. It leaves unresolved-use and evaluation caveats intact.
 
-What's left to watch: the answer is a template with a video placeholder, not a submission-ready statement. Historical test counts must retain their stated scope. The model-owner draft requests clarification and does not itself authorize use.
+What's left to watch: historical test counts retain their stated scope. The missing video and model-use confirmation are not resolved by editing prose or removing preparation documents.
