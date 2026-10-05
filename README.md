@@ -1,4 +1,4 @@
-# EventLens
+# EventLens - S&P Global & Crisil Campus Hackathon
 
 Trace financial text from evidence to structured event intelligence and explained stress results for a fictional wholesale-banking portfolio. EventLens does not forecast losses or recommend trades.
 
@@ -7,6 +7,8 @@ Code to Connect Phase III — S&P Global × Crisil × Naukri Campus.
 - Candidate: Abhinav Jain
 - College: Vellore Institute of Technology, Bhopal
 - College email: abhinav.23bcg10130@vitbhopal.ac.in
+- Demo video link: pending candidate recording and verified unlisted YouTube upload; not yet submission-ready.
+- Slide deck: [seven-slide PDF](docs/presentation.pdf).
 
 ## Current status
 
@@ -14,7 +16,25 @@ Phases 1–4 are complete: the backend/dashboard cover two live source adapters,
 
 The RSS and social adapters currently share one publisher, the Federal Reserve Board. Two channels are not independent corroboration. See [risk-engine verification](docs/phase2-verification.md), [stress verification](docs/phase3-verification.md), [dashboard verification](docs/phase4-verification.md), and [math/assumptions](docs/stress-model.md). Provider availability varies; degraded states never substitute fictional evidence.
 
-## Local Quickstart
+Latest [handoff check](docs/handoff-verification.json), 5 October: deterministic recording/replay/export and 183 backend/30 frontend tests passed. The bounded live probe was partial: five Bluesky records, RSS `SOURCE_HTTP_ERROR`, zero automatic live stress runs. This is not a fresh two-provider pass; labelled replay remains the reproducible demonstration path.
+
+## 1. Project overview / problem statement and approach
+
+A banking analyst needs to connect a financial announcement to the positions it could affect, with evidence and assumptions visible. EventLens addresses this as Module B, Strategic Portfolio Stress Testing, alongside the required NLP risk engine. Its fictional portfolio contains loans, bonds and swaps; it uses no confidential client records.
+
+The approach separates interpretation from calculation. Pretrained sentiment, phrase-based event classification and an illustrative impact rubric produce inspectable signals. Eligibility and exposure checks control automatic simulations; an analyst can also save a reasoned manual comparison. Versioned snapshots and exports show how the chosen shock changes each position and the total portfolio.
+
+## 2. Architecture and tech stack
+
+Official news/social adapters and labelled replay feed normalization, local sentiment and event/impact rules. SQLite retains evidence, eligibility reasons and stress snapshots; FastAPI serves the API and built React dashboard. The stress calculator uses Decimal arithmetic and separate original-base scenarios. Python 3.12, PyTorch/Transformers, SQLite, FastAPI, React, TypeScript and Vite form the local stack; pinned dependencies are in the requirements files and frontend lockfile.
+
+![EventLens architecture](docs/architecture.png)
+
+## 3. Dataset used
+
+The demo uses project-authored fictional [events](data/synthetic_events.json), a 20-position [portfolio CSV](data/portfolio.csv) with [assumptions](data/portfolio.json), and four [scenario definitions](data/scenarios.json). Fair value is $100m; $194.4m principal/notional is separate. Live adapters use Federal Reserve releases and official Bluesky posts, with their shared-publisher limitation disclosed. Archived-source manifests and optional diagnostic results have separate scope/use limitations; see the data/attribution and third-party notices below. The optional PhraseBank corpus is not needed for the app or recording and is not redistributed.
+
+## 4. Quickstart and installation
 
 Use Python 3.12 and Node.js 22.12 or newer (tested here with Node 24). Run commands from the repository root. On Windows, calling the environment's Python directly avoids activation-policy issues.
 
@@ -32,6 +52,8 @@ Pop-Location
 The one-time setup downloads roughly 418 MiB of model weights, plus Python dependencies. Weights are checksum-verified and stay in `.cache/`, outside Git. Server startup uses only the pinned local cache and makes no model-download request. If it is unavailable, health reports `MODEL_UNAVAILABLE`; analysis returns 503 without fabricated predictions. First-time acquisition needs internet access and can take several minutes or resume after a CDN timeout. An isolated local source export passed fresh environment/install/build/model acquisition and offline end-to-end checks in Phase 5. Source and submission artifacts have now been published; the actual published-clone check is tracked in [Phase 7 verification](docs/phase7-verification.md), separately from the local source export.
 
 Open the [dashboard](http://127.0.0.1:8000/) or [interactive API docs](http://127.0.0.1:8000/docs). The built React dashboard and API share one origin and one server. Only `frontend/dist` is served, not project data or runtime files. Build before starting the server; restart if the first frontend build was made after startup. Use one Uvicorn worker: job admission and inference serialization are deliberately single-process.
+
+For a prepared Windows recording session, run `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\start_demo.ps1` from the repository root. It builds the dashboard, verifies the existing local model, refuses an occupied port, starts on `127.0.0.1:8019` and uses a new database without touching existing runs. It does not install dependencies or download anything. Use `-Port 8021` if needed, `-CheckOnly` for preflight, or `-SkipBuild` only when deliberately reusing an already built dashboard. Ctrl+C stops the owned server. Follow the [candidate action plan](docs/candidate-action-plan.md), including unresolved third-party use notices, before recording/submitting.
 
 In the dashboard, load sample events for the reproducible fictional journey, select a rate event, inspect its evidence, and open the saved stress result. Portfolio shows base positions and assumptions; Runs retains independent calculations. Compare scenario requires a saved reason and is always labelled manual. Analyze supplied text is an optional collapsed panel; it cannot turn pasted text into verified live evidence. Refresh live sources never substitutes samples after a provider failure. All displayed dates are UTC.
 
@@ -64,7 +86,11 @@ Money is returned as decimal strings. Portfolio fair value is $100 million; prin
 
 `POST /api/signals/analyze` accepts English text and an optional timezone-aware publication timestamp. Supplied text is always unverified user input; it cannot claim official-source provenance. Its language is recorded as undetermined, not detected English. Non-English sentiment/classification is not validated.
 
-## What the engine means
+## 5. Key results and domain impact
+
+The impact-8 tightening example applies an illustrative 100 bp rate shock, distinct from the 50 bp announcement. L01 loses $228,000; total P&L is -$2.618m and stressed fair value is $97.382m. The dashboard exposes source spans, review reasons, position contributions and saved CSV/JSON results. This supports explaining and comparing stated what-if assumptions; it does not predict actual losses or establish production risk accuracy. Engineering and language-evaluation results are separately documented below.
+
+## Risk-engine method
 
 - Sentiment: pretrained `ProsusAI/finbert`, signed score `P(positive) - P(negative)` in [-1, 1]. No project-specific training or independent accuracy claim. The measured PhraseBank diagnostic may overlap model training.
 - Event class: conservative English phrase rules (`phrase_rules_v2`), not FinBERT event predictions. Classes include Macroeconomic, Credit Event, Geopolitical, Merger/Acquisition, Product Launch, and Other/Unknown. Archived full-release impact agreement is only 4/12; analyst review and explicit limitations are essential.
@@ -153,3 +179,5 @@ Signals, raw evidence, operation states, source cooldowns and completed stress s
 The pretrained model, libraries, and sources remain third-party work. See [third-party notices](THIRD_PARTY_NOTICES.md). Project code is [MIT licensed](LICENSE). AI-assisted development is used; candidate walkthrough, label review, and final submission checks are still required.
 
 The [project plan](PROJECT_PLAN.md) tracks remaining phases, repository-naming guidance, model notices, and final packaging. Presentation claims distinguish software checks from language evaluation; AI-drafted labels and archive limitations remain visible. The [architecture image](docs/architecture.png) is also available as a static diagram. Recorded-video preparation does not imply a video has been recorded, uploaded or submitted.
+
+Remaining candidate steps are ordered in [candidate-action-plan.md](docs/candidate-action-plan.md). [Clarification email drafts](docs/clarification-emails.md) have not been sent; the [submission answer template](docs/submission-answer-template.md) must receive the real verified YouTube URL before use.

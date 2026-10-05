@@ -33,7 +33,18 @@ Actual published-clone verification **passed all 11 steps** for application comm
 - The model cache was copied locally and its 437,992,753-byte weight checked against SHA-256 `e15a7b5738df7f17553399b6d94c6e2ff69c89245d066e8e5d183f5803a554e3`. This is disclosed cache reuse, not another fresh-weight download. Phase 5 independently verified acquisition into an absent cache.
 - PDF/PNG bytes match the published artifacts; text inputs/lockfile match after Git newline normalization. Generated files remain ignored and cloned Git status is clean.
 
-Later follow-up commits change only documentation to record this result. This gate did not rerun the full browser suite or live providers; the 43 browser checks remain separately documented Phase 5 evidence.
+The immediate proof-recording follow-up commit changed only documentation. This clone gate did not rerun the full browser suite or live providers; the 43 browser checks remain separately documented Phase 5 evidence. The later recording-launcher change is separately verified below, not silently included in that older clone result.
+
+## Candidate handoff follow-up
+
+- Added candidate-action-plan.md, clarification-emails.md and submission-answer-template.md. The original Word guidelines specify unlisted YouTube; recording/checklist notes now state this explicitly. Draft emails have not been sent and no actual video URL is present.
+- Added scripts/start_demo.ps1: checked port, loopback-only server, existing pinned offline model verification, built dashboard and a fresh recording database. Dependencies/weights/diagnostic corpora are not downloaded by the launcher; existing databases are not reset. PowerShell syntax and no-server preflight passed.
+- Tested the actual launcher over HTTP: model ready, built dashboard served, fresh empty event store, eight replay events and three simulations. The hike run gives P&L -$2,618,000 and stressed value $97,382,000; CSV sums reconcile and portfolio base remains $100,000,000. A second launcher refused the occupied port. Ctrl+C stopped only the newly owned server, and port 8019 no longer had a listener.
+- Fresh backend rerun: 183 passed in 53.99 seconds, cached real model included and live tests excluded. Ruff passed. Frontend: production build/typecheck, 30 tests in 49.83 seconds and formatting passed. Full browser/clone suites were not rerun for this handoff; earlier results retain their original scope.
+- One bounded live probe on 5 October at 12:14 UTC, five items per adapter: Bluesky supplied five records; RSS returned SOURCE_HTTP_ERROR. The full two-provider verifier correctly failed. The stored health does not retain a specific HTTP status, so none is invented. Refresh retained one successful and one failed source and produced zero automatic live stress runs, without fictional fallback. No repeated provider probe was made. Isolated database: runtime/verification-f7bf4d0f33c2486b9625d8b811893d02.sqlite3; its failed-run evidence remains local/ignored.
+- Third-party primary-source check records the weight-specific license gap, PhraseBank restrictions and publisher policy in THIRD_PARTY_NOTICES.md; it does not declare permission resolved. Humanizer light-mode gates passed for the new answer/email drafts. Model training, independent accuracy and candidate approvals were not invented.
+
+Sanitized current measurements: [handoff-verification.json](handoff-verification.json). The seven-slide PDF remains unchanged. Final video-link update, human label review, permission/naming decisions and assessment submission remain candidate-dependent.
 
 ## Outstanding submission gates
 

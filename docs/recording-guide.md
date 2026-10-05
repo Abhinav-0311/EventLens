@@ -14,11 +14,10 @@ Review draft for Abhinav. Explain this in your own words after the walkthrough; 
 Example isolated demo start, from the repository root after Quickstart setup:
 
 ```powershell
-$env:EVENTLENS_DATABASE = Join-Path (Get-Location) ('runtime/recording-' + [guid]::NewGuid().ToString('N') + '.sqlite3')
-.\.venv\Scripts\python.exe -m uvicorn eventlens.api:app --host 127.0.0.1 --port 8019 --workers 1
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\start_demo.ps1
 ```
 
-First check that 8019 is free, or choose another free port. The new empty database is intentional and does not overwrite an existing one. End the owned server with Ctrl+C after recording. The environment variable applies to this shell, not a public deployment.
+The launcher refuses an occupied port; append `-Port 8021` if needed. It builds the frontend and checks the existing pinned cache without downloading weights or diagnostic datasets. The new empty database is intentional and does not overwrite an existing one. End the owned server with Ctrl+C after recording. It is loopback-only, not a public deployment. Show the launch command briefly in the recording; complete lengthy setup beforehand.
 
 ## Recorded narrative: approximately 6 minutes 40 seconds
 
@@ -91,4 +90,4 @@ If a live source is unavailable, show the error and saved evidence, then continu
 
 ## Final video checks
 
-Confirm 5–10 minutes, audible speech, readable figures, visible synthetic labels, no secrets, correct candidate/college identity and correct repository link. Open the uploaded link while signed out to test jury access. Upload and assessment submission are candidate actions; preparation does not submit anything.
+Confirm 5–10 minutes, audible speech, readable figures, visible synthetic labels, no secrets, correct candidate/college identity and correct repository link. The supplied guidelines require an unlisted YouTube video, not Drive/OneDrive. Open the uploaded link while signed out to test jury access. Upload and assessment submission are candidate actions; preparation does not submit anything.

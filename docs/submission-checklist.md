@@ -11,6 +11,7 @@ Status: review draft, not final submission approval. Due 11 October 2026; exact 
 - [x] Engineering gates: 183 backend, 30 frontend and 43 browser checks; isolated local source export passed 15 steps. See phase5-verification.md for evidence and scope.
 - [x] Seven-slide source and 6–7 minute recording guide prepared.
 - [x] Candidate authorized commit and push after checks.
+- [x] Ordered candidate action plan, clarification-email drafts and submission-answer template prepared. Emails are not sent; the real video link remains absent.
 
 ## Finish before claiming submission-ready
 
@@ -20,8 +21,10 @@ Status: review draft, not final submission approval. Due 11 October 2026; exact 
 - [ ] Candidate completes walkthrough and records label review in evaluation-review.md. Do not approve AI draft labels merely because outputs agree.
 - [ ] Resolve model-weight and optional diagnostic-data use/attribution notices in THIRD_PARTY_NOTICES.md. MIT code licensing does not imply rights to everything downloaded.
 - [ ] Organizer confirms whether EventLens repository naming is accepted, or candidate authorizes the guideline-compliant rename. Current required pattern: <college>-<candidate-name>-hackathon.
+- [ ] Organizer confirms whether the two news/social channels from one publisher satisfy the source requirement, and clarifies optional diagnostic-data packaging if necessary.
 - [ ] Confirm deadline time/timezone and assessment access privately; do not publish the gateway access URL.
-- [ ] Candidate records 5–10 minute video, checks playback and uploads to the intended submission destination.
+- [ ] Candidate records 5–10 minute video, checks playback and uploads to YouTube as unlisted, as the supplied guidelines specify.
+- [ ] Replace README's pending demo-video field and submission-template placeholder with the verified final YouTube URL.
 - [ ] Check video/repository access from a signed-out browser; do not assume private deck or drive access works for the jury.
 - [ ] Cross-check identity: Abhinav Jain; Vellore Institute of Technology, Bhopal; college email abhinav.23bcg10130@vitbhopal.ac.in.
 - [ ] Candidate reviews and explicitly submits through DoSelect, then retains the confirmation privately.

@@ -25,3 +25,15 @@ What's left to watch: “untuned” refers only to these archive cases not being
 ## Remaining human gates
 
 Candidate walkthrough/labels, model/data-use notices, naming and cutoff clarification, recording/upload and assessment submission remain pending. Publication or preparing a deck does not complete those gates.
+
+## Handoff wording review
+
+Humanizer mode: light for submission-answer-template.md and clarification-emails.md; the procedural action plan remains structured handoff text. Draft rewrite and final rewrite are the scoped files added during handoff. Both mechanical light-mode checks passed.
+
+What makes the draft read as generated? No filler cluster required a rewrite. The answer's engineering-count paragraph could sound like an accuracy assertion without its explicit qualification; the phrase "two channels" could imply independent sources without "same publisher". Those qualifications are retained. The email questions are concrete requests, not a claim that replies or approvals already exist.
+
+Anything fabricated? No. Candidate identity, project scope, values, source/version details and stated requirements come from the project evidence and supplied documents. No human understanding, recording, sent email, permission or completed submission was invented.
+
+What I cut: no cosmetic rewrite was needed after the mechanical pass. The new copy uses plain verbs and direct questions, avoiding C2 filler, C5 em dashes and C8 signpost phrases. It leaves unresolved-use and evaluation caveats intact.
+
+What's left to watch: the answer is a template with a video placeholder, not a submission-ready statement. Historical test counts must retain their stated scope. The model-owner draft requests clarification and does not itself authorize use.
