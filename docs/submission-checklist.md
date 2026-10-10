@@ -23,7 +23,7 @@ Status: application implemented; final submission incomplete. Due 11 October 202
 - [ ] Organizer confirms whether the two news/social channels from one publisher satisfy the source requirement, and clarifies optional diagnostic-data packaging if necessary.
 - [ ] Confirm deadline time/timezone and assessment access privately; do not publish the gateway access URL.
 - [ ] Candidate records 5–10 minute video, checks playback and uploads to YouTube as unlisted, as the supplied guidelines specify.
-- [ ] Add the actual verified final YouTube video link to README before submission.
+- [x] Add the candidate-supplied [YouTube walkthrough link](https://youtu.be/c9yeJD6x5NI) to README. Supplied 10 October; playback, duration and Unlisted visibility remain unverified.
 - [ ] Check video/repository access from a signed-out browser; do not assume private deck or drive access works for the jury.
 - [ ] Cross-check identity: Abhinav Jain; Vellore Institute of Technology, Bhopal; college email abhinav.23bcg10130@vitbhopal.ac.in.
 - [ ] Candidate reviews and explicitly submits through DoSelect, then retains the confirmation privately.
